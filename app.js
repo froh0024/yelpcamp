@@ -60,7 +60,7 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 app.use(flash());
-app.use(helmet());
+//app.use(helmet());
 
 const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com/",
@@ -69,6 +69,7 @@ const scriptSrcUrls = [
     "https://kit.fontawesome.com/",
     "https://cdnjs.cloudflare.com/",
     "https://cdn.jsdelivr.net",
+    "https://res.cloudinary.com/dy1hs46br/"
 ];
 //This is the array that needs added to
 const styleSrcUrls = [
@@ -79,14 +80,17 @@ const styleSrcUrls = [
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
     "https://cdn.jsdelivr.net",
+    "https://res.cloudinary.com/dy1hs46br/"
 ];
 const connectSrcUrls = [
-    "https://api.mapbox.com/",
+    "https://pk.eyJ1IjoiZW1pbHlmcm9obWFkZXIiLCJhIjoiY2xjN3RlZzRlMnJvdDN3cDk1czV5NWU2OSJ9.L6f4xHm0ijRuq8MeHHVPCQ.mapbox.com/",
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
+    "https://res.cloudinary.com/dy1hs46br/"
 ];
-const fontSrcUrls = [];
+const fontSrcUrls = ["https://res.cloudinary.com/dy1hs46br/"];
+
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
