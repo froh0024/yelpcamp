@@ -83,11 +83,10 @@ const styleSrcUrls = [
     "https://res.cloudinary.com/dy1hs46br/"
 ];
 const connectSrcUrls = [
-    "https://pk.eyJ1IjoiZW1pbHlmcm9obWFkZXIiLCJhIjoiY2xjN3RlZzRlMnJvdDN3cDk1czV5NWU2OSJ9.L6f4xHm0ijRuq8MeHHVPCQ.mapbox.com/",
-    "https://a.tiles.mapbox.com/",
-    "https://b.tiles.mapbox.com/",
-    "https://events.mapbox.com/",
-    "https://res.cloudinary.com/dy1hs46br/"
+    "https://*.tiles.mapbox.com",
+    "https://api.mapbox.com",
+    "https://events.mapbox.com",
+    "https://res.cloudinary.com/dv5vm4sqh/"
 ];
 const fontSrcUrls = ["https://res.cloudinary.com/dy1hs46br/"];
 
@@ -104,10 +103,12 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/console/c-4235395fa3e03f41eef64b3d53e303/media_library/folders/home/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dy1hs46br", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
+            mediaSrc   : [ "https://res.cloudinary.com/dy1hs46br/" ],
+            childSrc   : [ "blob:" ]
         },
     })
 );
